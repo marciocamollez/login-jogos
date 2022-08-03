@@ -1,0 +1,58 @@
+@import "../../styles/Variables.scss";
+
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: $bgBlue;
+    height: 100vh;
+}
+
+.formlogin{
+    max-width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgBlue;
+    
+
+    img{
+        margin-bottom: 20px;
+    }
+
+    input{
+        background-color: $navyBlue;
+        min-width: 278px;
+        border: 0;
+        color: #FFF;
+
+        &:focus{
+            background-color: $navyBlue;
+            color: #FFF;
+        }
+    }
+
+    button{
+        background-color: $green;
+        color: #000;
+        text-transform: uppercase;
+        width: 100%;
+
+        &:hover{
+            background-color: $greenHover;
+        }
+
+        &:focus{
+            background-color: $greenHover;
+        }
+    }
+
+    p{
+        color: #FFF;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    
+}

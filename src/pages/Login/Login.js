@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import styles from "./Login.module.scss";
 
 function Login() {
-
   const navigate = useNavigate();
 
   const database = [
@@ -37,36 +39,45 @@ function Login() {
         message: "Login Realizado com Sucesso",
       });
       navigate("/dashboard");
-
     } else {
       setStatus({
         type: "error",
-        message: "Login ou senha inválido",
+        message: "Login ou senha inválidos",
       });
     }
   };
 
   return (
-    <div>
-      <form onSubmit={loginSubmit}>
-        <input
-          type="text"
-          name="email"
-          placeholder="E-mail"
-          onChange={valueInput}
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Senha"
-          onChange={valueInput}
-        />
+    <div className={styles.container}>
+      <div className={styles.formlogin}>
+        <div>
+          <img src="./logo.png" alt="Logo" title="Logo" />
+        </div>
+        <Form onSubmit={loginSubmit}>
+          <Form.Group className="mb-3">
+            <Form.Control
+              type="text"
+              name="email"
+              placeholder="E-MAIL"
+              onChange={valueInput}
+            />
+          </Form.Group>
 
-        <button type="submit">Entrar</button>
+          <Form.Group className="mb-3">
+            <Form.Control
+              type="password"
+              name="password"
+              placeholder="SENHA"
+              onChange={valueInput}
+            />
+          </Form.Group>
 
-        {status.type === "error" ? <p>{status.message}</p> : ""}
-        {status.type === "success" ? <p>{status.message}</p> : ""}
-      </form>
+          <Button type="submit">Entrar</Button>
+
+          {status.type === "error" ? <p>{status.message}</p> : ""}
+          {status.type === "success" ? <p>{status.message}</p> : ""}
+        </Form>
+      </div>
     </div>
   );
 }
