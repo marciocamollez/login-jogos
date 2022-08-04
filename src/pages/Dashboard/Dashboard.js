@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Products from "../../components/Products/Products";
+import Sidebar from "../../components/Sidebar/Sidebar";
 
 function Dashboard() {
   const [games, setGames] = useState([]);
@@ -15,7 +16,7 @@ function Dashboard() {
 
   return (
     <div>
-      Dashboard
+      <Sidebar />
       <Products games={games} />
     </div>
   );

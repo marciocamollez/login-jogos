@@ -1,0 +1,53 @@
+@import "../../styles/Variables.scss";
+
+.border{
+    border-bottom: 1px solid $lightGray;
+}
+
+.form-control{
+    background-color: $lightGray;
+}
+
+.sidebarInput {
+   background-color: $lightGray;
+   border: none;
+}
+.sidebarBtn{
+    background-color: $lightGray;
+    border: none;
+
+    &:hover{
+        background-color: $greenHover;
+    }
+}
+
+
+nav{
+    ul{
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        margin: 0;
+
+        li{
+            list-style: none;
+            margin-bottom: 15px;
+    
+            a{
+                display: flex;
+                justify-content: space-between;
+                text-transform: uppercase;
+                color: $navyBlue;
+                text-decoration: none;
+
+                &:hover{
+                    color: $greenHover;
+                }
+
+                svg{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
