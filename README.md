@@ -10,3 +10,7 @@ Instalei um Json Server que se encontra em db.json na pasta raíz. Para rodar o 
 
 url dos produtos: http://localhost:3000/produtos
 url jogo: http://localhost:3000/produtos/1
+
+# React
+
+Apos rodar o Mock na porta 3000, o npm start vai sugerir abrir a aplicacao na 3001, pois o server estará rodando na 3000
