@@ -6,12 +6,11 @@ function Dashboard() {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    const fetchSearch = async () => {
+    const fetch = async () => {
       const result = await axios(`http://localhost:3000/produtos`);
       setGames(result.data);
-      console.log(result.data);
     };
-    fetchSearch();
+    fetch();
   }, []);
 
   return (
