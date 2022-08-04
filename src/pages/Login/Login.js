@@ -74,6 +74,18 @@ function Login() {
 
           <Button type="submit">Entrar</Button>
 
+          <div className={styles.checkGroup}>
+            <label className={styles.switch}>
+              <input type="checkbox" />
+              <span className={styles.slider}></span>
+            </label>
+            <div className={styles.logado}>PERMANECER LOGADO</div>
+          </div>
+
+          <a href="/" className={styles.cadastro}>
+            cadastrar
+          </a>
+
           {status.type === "error" ? <p>{status.message}</p> : ""}
           {status.type === "success" ? <p>{status.message}</p> : ""}
         </Form>
