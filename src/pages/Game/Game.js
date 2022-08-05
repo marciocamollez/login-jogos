@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Sidebar from "../../components/Sidebar/Sidebar";
 
 function Game() {
   const [game, setGame] = useState([]);
@@ -18,6 +19,7 @@ function Game() {
 
   return (
     <div>
+      <Sidebar />
       <div>{game.nome}</div>
       <div>{game.descricao}</div>
       <div>{game.preco}</div>

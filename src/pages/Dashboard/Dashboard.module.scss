@@ -1,0 +1,27 @@
+@import "../../styles/Variables.scss";
+
+.background{
+    background-color: $bgBlue;
+    min-height: 100vh;
+}
+
+.highlights{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    box-sizing: border-box;
+
+    h1{
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: #FFF;
+    }
+
+    .line{
+        height: 5px;
+        background-color: $navyBlue;
+        width: 90%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,14 @@
+@import "../../styles/Variables.scss";
+
+.slider{
+    display: flex;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    div{
+        img{
+            max-width: 100%;
+            display: block;
+        }
+    }
+}

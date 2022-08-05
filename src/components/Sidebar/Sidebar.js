@@ -33,8 +33,8 @@ function Sidebar() {
         <div>
           <button type="button" className={styles.btnAddToCart}>
             <MdOutlineShoppingCart />
-            <span class="position-absolute top-10 start-90 translate-middle badge rounded-pill bg-danger">
-              4<span class="visually-hidden">products</span>
+            <span className="position-absolute top-10 start-90 translate-middle badge rounded-pill bg-danger">
+              4<span className="visually-hidden">products</span>
             </span>
           </button>
 
