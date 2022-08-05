@@ -17,10 +17,15 @@
         color: #FFF;
     }
 
+    h2{
+        font-size: 2rem;
+        color: #FFF;
+    }
+
     .line{
         height: 5px;
         background-color: $navyBlue;
-        width: 90%;
+        flex: 5;
         margin-left: 10px;
         margin-right: 10px;
     }

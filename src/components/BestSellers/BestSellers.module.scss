@@ -1,0 +1,96 @@
+@import "../../styles/Variables.scss";
+
+.maisVendidos{
+    display: flex;
+    padding: 0 20px 20px 20px;
+    box-sizing: border-box;
+
+    .container{
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &:first-child{
+            padding-left: 0;
+        }
+        &:last-child{
+            padding-right: 0;
+        }
+
+        @media(max-width: 930px){
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .boxImage{
+        position: relative;
+
+        img{
+            max-width: 100%;
+            display: block;
+            border-radius: 6px;
+        }
+
+        
+
+        &:hover{ 
+            .boxOverlay{
+                opacity: 0.9;
+                border: 1px solid $green;
+            }
+        }
+
+        .boxOverlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            background-color: #000;
+            border-radius: 6px;
+
+            .boxHide{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+
+                p{
+                    color: #FFF;
+                }
+                
+                .preco{
+                    color: $green;
+                }
+
+                .btnFooter{
+                    display: flex;
+                    justify-content: flex-end;
+
+                    button{
+                        background-color: $green;
+                        color: #000;
+                        text-transform: uppercase;
+                        font-size: 0.8rem;
+                        margin-left: 10px;
+
+                        &:hover{
+                            background-color: $greenHover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: 930px){
+        flex-direction: column;
+        align-items: center;
+    }
+}
