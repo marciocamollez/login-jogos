@@ -10,6 +10,10 @@ import { BsSearch } from "react-icons/bs";
 import { BiHome } from "react-icons/bi";
 import { FiUser } from "react-icons/fi";
 import { AiOutlineRight } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MdOutlineShoppingCart } from "react-icons/md";
+
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   const [show, setShow] = useState(false);
@@ -17,10 +21,30 @@ function Sidebar() {
   const handleShow = () => setShow(true);
 
   return (
-    <div className={styles.sidebar}>
-      <Button variant="primary" onClick={handleShow}>
-        Launch
-      </Button>
+    <div>
+      <header className={styles.head}>
+        <div>
+          <button onClick={handleShow} className={styles.btnMenuHeader}>
+            <GiHamburgerMenu />
+          </button>
+          <img src="/logo.png" alt="My Collection" title="My Collection" />
+        </div>
+
+        <div>
+          <button type="button" className={styles.btnAddToCart}>
+            <MdOutlineShoppingCart />
+            <span class="position-absolute top-10 start-90 translate-middle badge rounded-pill bg-danger">
+              4<span class="visually-hidden">products</span>
+            </span>
+          </button>
+
+          <Link to="/dashboard">
+            <button type="button" className={styles.btnProfile}>
+              <FiUser />
+            </button>
+          </Link>
+        </div>
+      </header>
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton className={styles.border}>
@@ -28,11 +52,7 @@ function Sidebar() {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <InputGroup className="mb-3">
-            <Button
-              variant="outline-secondary"
-              id="button-addon1"
-              className={styles.sidebarBtn}
-            >
+            <Button id="button-addon1" className={styles.sidebarBtn}>
               <BsSearch />
             </Button>
             <Form.Control
@@ -46,7 +66,7 @@ function Sidebar() {
           <nav>
             <ul>
               <li>
-                <a href="/">
+                <Link to="/dashboard">
                   <span>
                     <BiHome />
                     Home
@@ -54,10 +74,10 @@ function Sidebar() {
                   <span>
                     <AiOutlineRight />
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/">
+                <Link to="/dashboard">
                   <span>
                     <FiUser />
                     Perfil
@@ -65,7 +85,7 @@ function Sidebar() {
                   <span>
                     <AiOutlineRight />
                   </span>
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
