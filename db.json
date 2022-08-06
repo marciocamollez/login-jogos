@@ -6,7 +6,8 @@
         "descricao": "Ori and the Blind Forest é um jogo eletrônico de aventura em plataforma desenvolvido pela Moon Studios e publicado pela Microsoft Studios para Xbox One e Windows 10 no dia 11 de março de 2015. No dia 27 de Setembro de 2019, também foi lançado",
         "preco": 36.99,
         "tipo": "Aventura",
-        "img": "/images/ori.jpeg"
+        "img": "/images/ori.jpeg",
+        "imgHD": "/images/ori-banner.jpg"
       },
       {
         "id": 2,
@@ -14,7 +15,8 @@
         "descricao": "Battlefield 2042 é um jogo eletrônico de tiro em primeira pessoa desenvolvido pela DICE e publicado pela Electronic Arts. É o décimo sétimo título da série Battlefield e a sequência de Battlefield V, de 2018.",
         "preco": 22.99,
         "tipo": "Ação",
-        "img": "/images/battlefield.jpg"
+        "img": "/images/battlefield.jpg",
+        "imgHD": "/images/battlefield-banner.jpg"
       },
       {
         "id": 3,
@@ -22,7 +24,8 @@
         "descricao": "Crash Bandicoot é uma franquia de jogos eletrônicos desenvolvida originalmente pela Naughty Dog para o console PlayStation. A série passou por várias desenvolvedoras e foi publicada em diversas plataformas posteriormente. Os jogos são do gênero plataforma com diversos spin-offs do gênero corrida e em grupo.",
         "preco": 39.00,
         "tipo": "Infantil",
-        "img": "/images/crash.jpg"
+        "img": "/images/crash.jpg",
+        "imgHD": "/images/crash-banner.jpg"
       },
       {
         "id": 4,
@@ -30,7 +33,8 @@
         "descricao": "Street Fighter V é um videojogo de luta publicado pela Capcom, que o produziu em colaboração com o estúdio Dimps. O sexto capítulo da série Street Fighter, foi lançado a 16 de Fevereiro de 2016 para Microsoft Windows e PlayStation 4.",
         "preco": 51.99,
         "tipo": "Luta",
-        "img": "/images/street-fighter.jpg"
+        "img": "/images/street-fighter.jpg",
+        "imgHD": "/images/street-fighter-banner.jpg"
       },
       {
         "id": 5,
@@ -38,7 +42,8 @@
         "descricao": "Forza Horizon 5 é um jogo eletrônico de corrida desenvolvido pela Playground Games e publicado pela Xbox Game Studios. É o quinto jogo da série Forza Horizon e o décimo segundo título principal da franquia Forza. O jogo se passa em uma representação ficcional do México.",
         "preco": 51.99,
         "tipo": "Corrida",
-        "img": "/images/forza.jpeg"
+        "img": "/images/forza.jpeg",
+        "imgHD": "/images/forza-banner.jpg"
       }
     ],
     "mais-vendidos":[

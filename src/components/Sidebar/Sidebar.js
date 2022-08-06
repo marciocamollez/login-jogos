@@ -27,7 +27,9 @@ function Sidebar() {
           <button onClick={handleShow} className={styles.btnMenuHeader}>
             <GiHamburgerMenu />
           </button>
-          <img src="/logo.png" alt="My Collection" title="My Collection" />
+          <Link to="/dashboard">
+            <img src="/logo.png" alt="My Collection" title="My Collection" />
+          </Link>
         </div>
 
         <div>
