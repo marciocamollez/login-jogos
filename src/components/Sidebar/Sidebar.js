@@ -22,7 +22,7 @@ function Sidebar() {
 
   return (
     <div>
-      <header className={styles.head}>
+      <header className={styles.head} data-testid="test-header">
         <div>
           <button onClick={handleShow} className={styles.btnMenuHeader}>
             <GiHamburgerMenu />

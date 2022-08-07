@@ -6,11 +6,11 @@ import styles from "./BestSellers.module.scss";
 function BestSellers({ best }) {
   return (
     <div>
-      <section className={styles.maisVendidos}>
-        {best.map((game) => (
-          <div key={game.id} className={styles.container}>
-            <div className={styles.boxImage}>
-              <Link to={`/game/${game.id}`}>
+      <section className={styles.maisVendidos} data-testid="test-bestsellers">
+        {best &&
+          best.map((game) => (
+            <div key={game.id} className={styles.container}>
+              <div className={styles.boxImage}>
                 <img src={game.img} alt={game.nome} title={game.nome} />
                 <div className={styles.boxOverlay}>
                   <div className={styles.boxHide}>
@@ -28,10 +28,9 @@ function BestSellers({ best }) {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </section>
     </div>
   );

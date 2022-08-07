@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BestSellers Component should render best sellers div 1`] = `
+<section
+  class="maisVendidos"
+  data-testid="test-bestsellers"
+/>
+`;
