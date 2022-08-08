@@ -5,6 +5,8 @@ import "react-multi-carousel/lib/styles.css";
 import styles from "./SliderProducts.module.scss";
 
 function SliderProducts({ games }) {
+  const length = [];
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -25,22 +27,24 @@ function SliderProducts({ games }) {
   };
 
   return (
-    <div>
+    <div data-testid="test-slider">
       <Carousel
         responsive={responsive}
         autoPlay={true}
         autoPlaySpeed={2000}
         infinite={true}
       >
-        {games.map((game) => (
-          <section key={game.id} className={styles.slider}>
-            <div>
-              <Link to={`/game/${game.id}`}>
-                <img src={game.img} alt={game.nome} title={game.nome} />
-              </Link>
-            </div>
-          </section>
-        ))}
+        {games &&
+          games.map((game) => (
+            <section key={game.id} className={styles.slider}>
+              <div>
+                <Link to={`/game/${game.id}`}>
+                  <img src={game.img} alt={game.nome} title={game.nome} />
+                </Link>
+              </div>
+            </section>
+          ))}
+        {length}
       </Carousel>
     </div>
   );
